@@ -31,7 +31,7 @@ var bucket = cluster.openBucket('default', function (err) {
         throw err;
     } else {
         var counter = [];
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 1000; i++) {
           counter[i] = i;
         }
         async.eachSeries(counter, function(i, next) {
