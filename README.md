@@ -47,5 +47,33 @@ node.js用のスクリプト
     Inserted : 3
     Finished!
 
-### ライセンス
-* MIT License
+## add-postgresql-data1.js
+* PostgreSQL にテストデータを作成するスクリプト
+* 作成する件数は、`i < 1000` の部分を変更
+* age の値は乱数で生成
+
+### インストール
+* node.js はインストールしておくこと
+1. 適当なディレクトリを作成
+2. package.jsonファイルを作成
+    {
+      "devDependencies": {
+        "pg": "*",
+        "async": "*"
+      }
+    }
+3. npm installで依存モジュールをインストール
+4. 同ディレクトリに、add-postgresql-data1.jsファイルを配置する
+
+### 実行
+`# node add-postgresql-data1`
+
+### 実行例
+    qs=INSERT INTO  t_dummy (id, age) VALUES('user-999', 25);
+    Inserted : 999
+    qs=INSERT INTO  t_dummy (id, age) VALUES('user-1000', 18);
+    Inserted : 1000
+    Finished!
+
+## ライセンス
+* 本スクリプトを使用したことによる責任は負いかねますが、その前提にて、自由にご利用下さい。
